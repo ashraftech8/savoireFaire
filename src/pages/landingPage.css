@@ -1,0 +1,85 @@
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee {
+  display: flex;
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 200px; /* Adjust as needed */
+  height: 200px; /* Adjust as needed */
+  background-image: url("https://www.savoirfaire.nyc/_nuxt/cursor.5ff4b071.svg");
+  background-size: cover;
+  background-color: transparent !important; /* Set background color to transparent */
+  background-repeat: no-repeat; /* Ensure image is not repeated */
+  background-position: center; /* Center the background image */
+  pointer-events: none;
+  z-index: 10; /* Adjust the z-index to ensure it's above other elements */
+  cursor: none;
+  transition: 0.1s ease; /* Add transition for left and top properties */
+  mix-blend-mode: difference;
+}
+
+/*Modal  */
+.Modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 80%;
+  max-height: 80%;
+  overflow: auto;
+  animation: slideIn 0.5s ease-out; /* Animation for sliding in */
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translate(-50%, -100%);
+  }
+  to {
+    transform: translate(-50%, -50%);
+  }
+}
+/* Vedoi */
+.national-video {
+  border: none !important;
+  outline: unset !important;
+  box-shadow: none !important;
+}
+
+/* Modal */
+.modal-open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100; /* Adjust this value if needed */
+}

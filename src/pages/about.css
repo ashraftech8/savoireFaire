@@ -1,0 +1,94 @@
+/* Background Image */
+.background-image {
+  background-image: url("https://www.savoirfaire.nyc/_nuxt/cursor.5ff4b071.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: absolute;
+  background-color: #cdfd50;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -10;
+}
+
+/*  */
+.shadow-animation {
+  box-shadow: 2px 6px 10px rgba(3, 0, 40, 0.1), 4px 2px 4px rgba(0, 0, 4, 0.1);
+  animation: shadowWave 6s infinite ease-in-out;
+}
+
+@keyframes shadowWave {
+  0% {
+    box-shadow: 2px 10px 10px rgba(3, 0, 40, 0.1),
+      4px 2px 4px rgba(0, 0, 4, 0.1);
+  }
+  50% {
+    box-shadow: 6px 10px 10px rgba(24, 196, 12, 0.2),
+      6px 10px 10px rgba(0, 0, 4, 0.2);
+  }
+  100% {
+    box-shadow: 2px 10px 10px rgba(3, 0, 40, 0.1),
+      4px 2px 4px rgba(0, 0, 4, 0.1);
+  }
+}
+
+.ovel-custom {
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 90px;
+  font-weight: 500;
+  font-size: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.ovel-custom:hover {
+  transition: 0.5s ease-in-out;
+  height: 75px; /* Increased height on hover */
+  width: 95px; /* Increased width on hover */
+}
+/* Box shadow */
+/* styles.css */
+
+.box {
+  box-shadow: 0px 0px 0px 0 rgba(247, 243, 243, 0.7),
+    0px 0px 0px 0 rgba(247, 243, 243, 0.7);
+  animation: animate 2s linear infinite;
+  animation-delay: 2s;
+}
+
+@keyframes animate {
+  0% {
+    box-shadow: 0 0 0 0 rgba(247, 243, 243, 0.7),
+      0 0 0 0 rgba(247, 243, 243, 0.7);
+  }
+  40% {
+    box-shadow: 0 0 0 0 rgba(255, 4, 0, 0),
+      0 0 0 30px rgba(247, 243, 243, 0.996);
+  }
+  80% {
+    box-shadow: 0 0 0 0 rgba(255, 4, 0, 0), 0 0 0 70px rgba(255, 4, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgb(247, 243, 243), 0 0 0 30px rgba(255, 4, 0, 0);
+  }
+}
+/* Add these styles to your CSS file or styled-components */
+
+.box {
+  transition: transform 0.5s ease;
+}
+
+.move-to-top-left {
+  transform: translate(0%, 0%);
+}
+
+.move-to-top-center {
+  transform: translate(250%, 200%);
+}
